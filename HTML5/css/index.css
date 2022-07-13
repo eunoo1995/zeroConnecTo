@@ -39,19 +39,15 @@ body {
 }
 /* 메인 */
 .main {
-  /* height: 200px; */
   display: flow-root;
   background: blue;
   padding: 30px 15px;
+  /* height: 200px; */
   /* overflow: hidden; */
   /* padding: 30px 15px; */
   /* display: flex;
   flex-flow: row nowrap;
   justify-content: space-around; */
-  /* flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: stretch; */
 }
 /* .main::after {
   content: "";
