@@ -389,6 +389,24 @@ body {
   color: #f00;
   background-size: 14px 14px, 100%;
 }
+
+.term {
+  background: #aaa linear-gradient(to bottom, #ccc, #aaa);
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+.term h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.term-article img {
+  float: left;
+}
+
 /* 슬로건 */
 .slogan {
   background: lime;
