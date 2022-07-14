@@ -365,6 +365,34 @@ body {
   color: #ed552f;
 }
 
+/* 유효성 배너 */
+.balidation-link li {
+  background: rgb(184, 184, 184) linear-gradient(rgb(184, 184, 184), #eee);
+  margin-top: 20px;
+  border-radius: 20px;
+  padding: 8px;
+  font-size: 1.5rem;
+  width: 100%;
+  display: flow-root;
+}
+
+.balidation-link a {
+  display: inline-block;
+  width: 100%;
+  float: left;
+  padding-left: 10px;
+}
+
+.balidation-link a::before {
+  float: left;
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("./images/validation_icon.png");
+  background-repeat: no-repeat;
+}
+
 /* 슬로건 */
 .slogan {
   background: lime;
