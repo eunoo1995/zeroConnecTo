@@ -399,26 +399,56 @@ body {
   border-radius: 5px;
 }
 
-.term h2 {
-  font-size: 1.6rem;
+.term-title {
+  font-size: 1.5rem;
   font-weight: 700;
 }
 
-.term-list-wrap {
-  display: flow-root;
+.term-list {
+  margin-top: 15px;
 }
 
-.term-list-thumbnail {
+.term-list div {
+  display: flow-root;
+  margin-top: 10px;
+}
+
+.odd .term-list-subject,
+.odd .term-list-breif {
+  float: right;
+}
+
+.odd .term-list-thumbnail {
   float: left;
 }
 
-.term-list-subject {
-  float: right;
-  width: 140px;
+.even .term-list-subject,
+.even .term-list-breif {
+  float: left;
 }
-.term-list-breif {
+
+.even .term-list-thumbnail {
   float: right;
-  width: 140px;
+}
+
+.term-list-subject {
+  width: 145px;
+  color: #296897;
+}
+
+.term-list-thumbnail {
+  position: relative;
+  top: 2;
+}
+
+.term-list-thumbnail img {
+  vertical-align: top;
+}
+
+.term-list-breif {
+  width: 145px;
+  margin-top: 5px;
+  line-height: 1.5;
 }
 
 /* 슬로건 */
