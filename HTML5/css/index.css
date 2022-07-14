@@ -204,7 +204,6 @@ body {
 }
 
 .visual {
-  background: pink;
   height: 120px;
   position: relative;
 }
@@ -239,7 +238,6 @@ body {
 }
 
 .visual-text {
-  background: lime;
   animation-name: moveEffect;
   animation-duration: 2000ms;
   animation-fill-mode: forwards;
@@ -247,11 +245,13 @@ body {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-/* 메인 */
+/* 메인 콘텐츠 */
 .main {
   display: flow-root;
-  background: blue;
+  background: #fff;
   padding: 30px 15px;
+  border-radius: 15px 15px 0 0;
+  min-height: 400px;
   /* height: 200px; */
   /* overflow: hidden; */
   /* padding: 30px 15px; */
@@ -268,7 +268,6 @@ body {
 /* 그룹 */
 .group {
   float: left;
-  background: skyblue;
   margin: 0 15px;
 }
 .group1 {
@@ -281,6 +280,54 @@ body {
 
 .group3 {
   width: 190px;
+}
+
+/* 로그인 */
+.login {
+  background: orangered;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.login-title {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  color: #fff;
+  opacity: 0.8;
+}
+
+.login form,
+ul {
+  text-align: center;
+}
+
+.login-form {
+  background: #fff;
+  border-radius: 5px 5px 0 0;
+  display: flow-root;
+}
+
+.login-form fieldset {
+  position: relative;
+}
+
+.login-form fieldset > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.login-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.sign {
+  display: flex;
+  justify-content: space-around;
+  background: #fff;
+  padding-bottom: 5px;
+  border-radius: 0 0 5px 5px;
 }
 
 /* 슬로건 */
