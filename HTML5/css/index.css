@@ -474,6 +474,7 @@ body {
 
 .search-input {
   -webkit-appearance: none;
+  background: #fff;
   border: 1px solid #aaa;
   height: 24px;
   border-radius: 4px;
