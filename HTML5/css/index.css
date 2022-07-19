@@ -36,10 +36,7 @@ html {
 }
 
 body {
-  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
-    "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
-    "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-    sans-serif;
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   font-weight: 400;
   background: #ccc;
   color: #181818;
@@ -92,14 +89,7 @@ body {
 }
 
 .menu {
-  background: #d16527
-    linear-gradient(
-      to bottom,
-      #edad2d 0%,
-      #d16527 45%,
-      #d16527 60%,
-      #edad2d 100%
-    );
+  background: #d16527 linear-gradient(to bottom, #edad2d 0%, #d16527 45%, #d16527 60%, #edad2d 100%);
   padding-left: 232px;
   display: flow-root;
   height: 47px;
@@ -225,14 +215,12 @@ body {
 }
 
 .visual::before {
-  background-image: url(./images/ani_flower_01.png),
-    url(./images/ani_flower_02.png);
+  background-image: url(./images/ani_flower_01.png), url(./images/ani_flower_02.png);
   background-position: 0 -10px, 670px 0;
 }
 
 .visual::after {
-  background-image: url(./images/ani_flower_03.png),
-    url(./images/ani_flower_04.png);
+  background-image: url(./images/ani_flower_03.png), url(./images/ani_flower_04.png);
   background-position: 300px 10px, 800px 10px;
   animation-delay: 1000ms;
 }
@@ -375,8 +363,7 @@ body {
 }
 
 .balidation-list a {
-  background: url("./images/validation_icon.png") no-repeat 20px 50%,
-    linear-gradient(to bottom, #ccc, #aaa);
+  background: url("./images/validation_icon.png") no-repeat 20px 50%, linear-gradient(to bottom, #ccc, #aaa);
   background-color: #aaa;
   display: block;
   padding: 10px;
@@ -744,6 +731,51 @@ body {
 .news-item-thumbnail > figcaption {
   padding-top: 10px;
 } */
+
+/* 이벤트 및  관련 사이트 */
+.gradient-effect {
+  background: #eee linear-gradient(to bottom, #ccc, #eee);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.event {
+  position: relative;
+  line-height: 20px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.event-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.event-button-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.event-button-wrapper button {
+  width: 18px;
+  height: 18px;
+  overflow: hidden;
+  color: rgba(256, 256, 256, 0);
+  background-image: url("./images/back_forward.png");
+  border: 0;
+}
+
+.event-button-next {
+  background-position: right top;
+}
+
+.event-thumbnail img {
+  box-shadow: 5px 5px 0 0 #aaa;
+}
 
 /* 슬로건 */
 .slogan {
