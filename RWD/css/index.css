@@ -12,10 +12,11 @@
 
 /* 공통 헤더 */
 .appHeader {
-  max-width: var(--container-width);
-  margin: 0 auto;
-  padding: var(--spacing-xl) var(--spacing-md) var(--spacing-md);
   position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  padding: var(--spacing-base) var(--spacing-md);
+  gap: var(--spacing-base);
 }
 
 /* 공통 로고*/
@@ -31,17 +32,57 @@
   background: url(./../images/webcafe-logo.png) no-repeat 0 0 / 100%;
 }
 
-/* 공통 회원 바 */
+/* 공통 맴버서비스 */
 .memberOnly {
   display: flex;
-  position: absolute;
-  top: var(--spacing-base);
-  right: var(--spacing-md);
+  flex-flow: row nowrap;
+  justify-content: flex-end;
 }
 
-/* 공통 검색 폼 그룹 */
+/* 공통 검색 폼 */
 .searchForm__group {
   display: flex;
+  flex-flow: row nowrap;
+}
+
+.searchForm__group .formInput {
+  margin-right: var(--spacing-xs);
+}
+
+.searchForm__group .formInput__input {
+  width: 100%;
+  height: 2rem;
+  border: 1px solid var(--silver);
+  background: var(--white);
+  border-radius: 0.25rem;
+  padding: 0.125rem 0.75rem;
+}
+
+.button {
+  cursor: pointer;
+  height: 2rem;
+  border-radius: 0.25rem;
+  padding: 0.125rem 0.75rem;
+  white-space: nowrap;
+  font-size: var(--text-sm);
+}
+
+.button--fill {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  border: 0;
+}
+
+.button--outline {
+  background: transparent;
+  color: var(--secondary-color);
+  border: 1px solid currentColor;
+}
+
+.button--none {
+  border: 0;
+  padding: 0;
+  background: transparent;
 }
 
 /* 모바일 디바이스 (Mobile Device) */
@@ -51,21 +92,52 @@
     background: var(--primary-color);
     color: var(--white);
   }
-
-  .searchForm {
-    margin-top: var(--spacing-md);
+  /* 모바일 맴버서비스 */
+  .memberOnly {
+    order: -1;
+    font-size: var(--text-sm);
+  }
+  /* 모바일 검색 폼 */
+  .searchForm__group .formInput {
+    flex-grow: 1;
   }
 
-  /* 모바일 햄버거 버튼 */
+  /* 모바일 메인메뉴 제어버튼 */
   .button--burger {
     position: absolute;
-    top: 40px;
+    top: 3.75rem;
     right: var(--spacing-md);
   }
 }
 
 /* 데스트탑 디바이스 (Desktop Device) */
 @media (min-width: 768px) {
+  /* 데스크탑 헤더 */
+  .appHeader {
+    max-width: var(--container-width);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* 데스크탑 로고 */
+  .logo {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* 데스크탑 검색 폼 */
+  .searchForm__group {
+    justify-content: flex-end;
+  }
+  .searchForm__group .formInput {
+    width: 400px;
+  }
+
+  /* 데스크탑 메인메뉴 제어버튼 */
+  .button--burger {
+    display: none;
+  }
 }
 
 /* 고해상도 배경이비지 미디어쿼리 */
