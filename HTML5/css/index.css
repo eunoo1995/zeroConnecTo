@@ -998,30 +998,59 @@ body {
 }
 .footer-inner {
   display: grid;
-  grid-area: "a" / "b" / "c" / "d" / "e";
-  grid-template-areas:
-    "a b e"
-    "a c e"
-    "a d e";
+  grid-template-columns: 140px 1fr 120px;
+  /* grid-template-rows: auto auto auto; */
+  padding: 20px 0;
 }
+
+/* 푸터 로고 */
 
 .footer-logo {
-  grid-area: a;
+  /* grid-row-start: 1;
+  grid-column-start: 1;
+  grid-row-end: 4;
+  grid-column-end: 2;
+
+  grid-row: 1/4;
+  grid-column: 1/2; */
+  grid-area: 1 / 1 / 4 / 2;
+  align-self: center;
+  justify-self: center;
 }
 
+/* 가이드 링크 */
 .guide-list {
-  grid-area: b;
+  grid-area: 1 / 2 / 2 / 3;
   display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  background: #7b8385;
+  color: #fff;
+  border-radius: 20px;
+  padding: 4px 20px;
+  margin: 5px 20px;
+  text-transform: uppercase;
+  /* font-variant: small-caps; */
 }
 
+.guide-list a {
+  display: block;
+  padding: 6px 10px;
+}
+
+/* 주소 */
 .address {
-  grid-area: c;
+  grid-area: 2 / 2 / 3 / 3;
+  margin: 5px 20px;
 }
 
+/* 저작권 정보 */
 .copyright {
-  grid-area: d;
+  grid-area: 3 / 2 / 4 / 3;
+  margin: 5px 20px;
 }
 
+/* 배지 그룹 */
 .badge-container {
-  grid-area: e;
+  grid-area: 1 / 3 / 4 / 4;
 }
