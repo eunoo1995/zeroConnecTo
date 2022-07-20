@@ -2,3 +2,75 @@
 @import url("./a11y.css");
 @import url("./theme.css");
 @import url("./base.css");
+
+/* 공통 아이콘 (Font Awesome) */
+.far {
+  margin-right: var(--spacing-xs);
+}
+
+/* 모든 디바이스 (All Device) */
+
+/* 공통 헤더 */
+.appHeader {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: var(--spacing-xl) var(--spacing-md) var(--spacing-md);
+  position: relative;
+}
+
+/* 공통 로고*/
+.logo {
+  width: 12.75rem;
+  height: 3.687rem; /* 59px */
+}
+
+.logo__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(./../images/webcafe-logo.png) no-repeat 0 0 / 100%;
+}
+
+/* 공통 회원 바 */
+.memberOnly {
+  display: flex;
+  position: absolute;
+  top: var(--spacing-base);
+  right: var(--spacing-md);
+}
+
+/* 공통 검색 폼 그룹 */
+.searchForm__group {
+  display: flex;
+}
+
+/* 모바일 디바이스 (Mobile Device) */
+@media (min-width: 320px) and (max-width: 767px) {
+  /* 모바일 헤더 */
+  .appHeader {
+    background: var(--primary-color);
+    color: var(--white);
+  }
+
+  .searchForm {
+    margin-top: var(--spacing-md);
+  }
+
+  /* 모바일 햄버거 버튼 */
+  .button--burger {
+    position: absolute;
+    top: 40px;
+    right: var(--spacing-md);
+  }
+}
+
+/* 데스트탑 디바이스 (Desktop Device) */
+@media (min-width: 768px) {
+}
+
+/* 고해상도 배경이비지 미디어쿼리 */
+@media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .logo__link {
+    background: url(./../images/webcafe-logo@2x.png) no-repeat 0 0 / 100%;
+  }
+}
