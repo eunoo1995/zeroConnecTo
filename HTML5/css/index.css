@@ -997,6 +997,31 @@ body {
   background: #ccc linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 60%, #fff 100%);
 }
 .footer-inner {
-  background: coral;
-  height: 150px;
+  display: grid;
+  grid-area: "a" / "b" / "c" / "d" / "e";
+  grid-template-areas:
+    "a b e"
+    "a c e"
+    "a d e";
+}
+
+.footer-logo {
+  grid-area: a;
+}
+
+.guide-list {
+  grid-area: b;
+  display: flex;
+}
+
+.address {
+  grid-area: c;
+}
+
+.copyright {
+  grid-area: d;
+}
+
+.badge-container {
+  grid-area: e;
 }
