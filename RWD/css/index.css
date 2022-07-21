@@ -113,6 +113,41 @@ input[type="search"] {
     position: absolute;
     top: 3.75rem;
     right: var(--spacing-md);
+    width: 3.125rem;
+    height: 3.125rem;
+  }
+
+  .button--burger span {
+    position: absolute;
+    left: 0;
+    background: var(--white);
+    width: 100%;
+    height: 20%;
+    border-radius: 0.625rem;
+    transition: all 0.5s;
+  }
+
+  .button--burgerBarTop {
+    top: 0;
+  }
+  .is--active .button--burgerBarTop {
+    transform: rotate(45deg);
+  }
+
+  .button--burgerBarMiddle {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .is--active .button--burgerBarMiddle {
+    width: 0;
+  }
+
+  .button--burgerBarBottom {
+    top: 100%;
+    transform: translateY(-100%);
+  }
+  .is--active .button--burgerBarBottom {
+    transform: rotate(-45deg);
   }
 }
 
