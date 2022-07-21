@@ -159,6 +159,20 @@ input[type="search"] {
     top: 50%;
     transform: translateY(-50%) rotate(-45deg);
   }
+
+  /* 모바일 내비게이션 */
+  .appNavigation {
+    background: var(--secondary-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100vh;
+  }
+  .menu__list {
+    flex-flow: column nowrap;
+    padding: var(--spacing-base) var(--spacing-md);
+  }
 }
 
 /* 데스트탑 디바이스 (Desktop Device) */
@@ -188,6 +202,18 @@ input[type="search"] {
   /* 데스크탑 메인메뉴 제어버튼 */
   .button--burger {
     display: none;
+  }
+
+  /* 데스크탑 내비게이션 */
+  .appNavigation {
+    background: var(--secondary-color);
+    color: var(--white);
+  }
+  .menu__list {
+    max-width: var(--container-width);
+    margin-left: auto;
+    margin-right: auto;
+    flex-flow: row nowrap;
   }
 }
 
