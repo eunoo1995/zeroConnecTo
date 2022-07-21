@@ -109,12 +109,22 @@ input[type="search"] {
   }
 
   /* 모바일 메인메뉴 제어버튼 */
-  .button--burger {
+
+  .buttonWrapper {
+    padding: 0.25rem;
+    overflow: hidden;
     position: absolute;
     top: 3.75rem;
     right: var(--spacing-md);
-    width: 3.125rem;
-    height: 3.125rem;
+    transform: translate(0.25rem -0.25rem);
+  }
+  .button--burger {
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+  }
+  .button--burger:focus {
+    outline-offset: none;
   }
 
   .button--burger span {
@@ -123,31 +133,31 @@ input[type="search"] {
     background: var(--white);
     width: 100%;
     height: 20%;
-    border-radius: 0.625rem;
-    transition: all 0.5s;
+    border-radius: 0.25rem;
+    transition: all 200ms ease-in;
   }
 
   .button--burgerBarTop {
     top: 0;
   }
-  .is--active .button--burgerBarTop {
-    transform: rotate(45deg);
-  }
-
   .button--burgerBarMiddle {
     top: 50%;
     transform: translateY(-50%);
   }
-  .is--active .button--burgerBarMiddle {
-    width: 0;
-  }
-
   .button--burgerBarBottom {
     top: 100%;
     transform: translateY(-100%);
   }
-  .is--active .button--burgerBarBottom {
-    transform: rotate(-45deg);
+  .button--burger.is--active .button--burgerBarTop {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+  }
+  .button--burger.is--active .button--burgerBarMiddle {
+    transform: translate(-150%, -50%);
+  }
+  .button--burger.is--active .button--burgerBarBottom {
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
   }
 }
 
