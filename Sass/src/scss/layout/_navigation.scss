@@ -1,7 +1,6 @@
 @use "../utils" as *;
 
 .menu {
-  background: pink;
   @include paddingX(24px);
   @include paddingY(30px);
 
@@ -31,9 +30,9 @@
   }
 
   @include desktop {
-    @include boxSizeMax;
     background: $secondary-color;
     &__list {
+      @include boxSizeMax;
       @include flexbox($j: space-between);
     }
     &__link {

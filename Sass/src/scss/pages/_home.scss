@@ -12,17 +12,14 @@
 }
 
 .home {
-  [class*="__title"] {
-    margin-bottom: rem(16px);
-  }
+  @include paddingX(24px);
+  @include paddingY(16px);
 
   [class*="__summary"] {
     margin-top: rem(16px);
   }
 
   @include mobile {
-    @include paddingX(24px);
-    @include paddingY(16px);
     @include flexbox(column);
     gap: rem(16px);
   }
@@ -50,5 +47,92 @@
     .twitter {
       grid-area: twitter;
     }
+  }
+}
+
+.home > section,
+.home > article {
+  @include flexbox(column);
+  gap: rem(16px);
+}
+
+.book {
+  &__cover {
+    width: 70%;
+    @include autoMargin;
+    text-align: center;
+  }
+  &__ceverCaption {
+    margin-top: rem(16px);
+  }
+  &__info {
+    text-align: center;
+    margin-top: rem(16px);
+  }
+
+  &__info dt:nth-child(1),
+  &__info dd:nth-child(2) {
+    display: inline-block;
+  }
+
+  .ratingStar {
+    font-size: rem(20px);
+  }
+}
+.news {
+  &__date {
+    display: block;
+    text-align: right;
+    margin-top: rem(8px);
+  }
+  .iframeWrapper {
+    @include responseIframe;
+  }
+}
+.board {
+  position: relative;
+
+  &__item {
+    @include flexbox;
+    margin-top: rem(12px);
+  }
+
+  &__link {
+    width: calc(100% - 6rem);
+    @include textEllipis;
+  }
+  &__date {
+    flex-grow: 1;
+    text-align: right;
+  }
+  &__more {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: rem(12px);
+    transform: translateX($spacing-xs);
+  }
+}
+.favorite {
+  @include mobile {
+    &__link::after {
+      content: attr(data-tooltip);
+      color: $accent-favorite;
+      font-size: rem(12px);
+    }
+  }
+}
+.twitter {
+  &__userProfile {
+    float: right;
+    width: 20%;
+    max-width: 110px;
+    height: 110px;
+    shape-outside: circle(50%);
+    object-fit: 30% 40%;
+  }
+
+  &__userProfileImage {
+    border-radius: 50%;
   }
 }

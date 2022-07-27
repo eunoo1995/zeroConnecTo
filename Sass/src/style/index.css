@@ -489,7 +489,6 @@ legend {
     max-width: 64rem;
     margin-left: auto;
     margin-right: auto;
-    background: yellow;
   }
 }
 @media (max-width: 767px) {
@@ -575,7 +574,6 @@ legend {
 }
 
 .menu {
-  background: pink;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   padding-top: 1.875rem;
@@ -607,12 +605,12 @@ legend {
 }
 @media (min-width: 768px) {
   .menu {
-    max-width: 64rem;
-    margin-left: auto;
-    margin-right: auto;
     background: #988574;
   }
   .menu__list {
+    max-width: 64rem;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -622,6 +620,30 @@ legend {
   .menu__link {
     color: #fff;
     text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
+  }
+}
+
+.appFooter {
+  background: #38302e;
+  color: #fff;
+  padding: 1.5rem;
+}
+@media (min-width: 768px) {
+  .appFooter {
+    text-align: center;
+  }
+}
+
+.address {
+  margin-bottom: 1rem;
+}
+@media (max-width: 767px) {
+  .address {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: nowrap;
   }
 }
 
@@ -645,18 +667,17 @@ legend {
   margin-top: 16px;
 }
 
-.home [class*=__title] {
-  margin-bottom: 1rem;
+.home {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 .home [class*=__summary] {
   margin-top: 1rem;
 }
 @media (max-width: 767px) {
   .home {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -691,6 +712,104 @@ legend {
   .home .twitter {
     grid-area: twitter;
   }
+}
+
+.home > section,
+.home > article {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+
+.book__cover {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.book__ceverCaption {
+  margin-top: 1rem;
+}
+.book__info {
+  text-align: center;
+  margin-top: 1rem;
+}
+.book__info dt:nth-child(1), .book__info dd:nth-child(2) {
+  display: inline-block;
+}
+.book .ratingStar {
+  font-size: 1.25rem;
+}
+
+.news__date {
+  display: block;
+  text-align: right;
+  margin-top: 0.5rem;
+}
+.news .iframeWrapper {
+  position: relative;
+  width: 100%;
+  height: 0 !important;
+  padding-top: 56.25%;
+}
+.news .iframeWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.board {
+  position: relative;
+}
+.board__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  margin-top: 0.75rem;
+}
+.board__link {
+  width: calc(100% - 6rem);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.board__date {
+  flex-grow: 1;
+  text-align: right;
+}
+.board__more {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.75rem;
+  transform: translateX(0.5rem);
+}
+
+@media (max-width: 767px) {
+  .favorite__link::after {
+    content: attr(data-tooltip);
+    color: #eea60a;
+    font-size: 0.75rem;
+  }
+}
+
+.twitter__userProfile {
+  float: right;
+  width: 20%;
+  max-width: 110px;
+  height: 110px;
+  shape-outside: circle(50%);
+  object-fit: 30% 40%;
+}
+.twitter__userProfileImage {
+  border-radius: 50%;
 }
 
 /*# sourceMappingURL=index.css.map */

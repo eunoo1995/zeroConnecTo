@@ -34,6 +34,17 @@
   left: $l;
 }
 
+@mixin posLeft($t, $l, $pos: absolute) {
+  position: $pos;
+  top: rem($t);
+  left: rem($l);
+}
+@mixin posRight($t, $r, $pos: absolute) {
+  position: $pos;
+  top: rem($t);
+  right: rem($r);
+}
+
 @mixin posCenterX($pos: absolute) {
   position: $pos;
   left: 50%;
