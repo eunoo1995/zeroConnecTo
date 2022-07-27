@@ -404,7 +404,32 @@ legend {
   background-position: 0 -460px;
 }
 
+.button {
+  border: 0;
+  padding: 0.25em 1em;
+  border-radius: 0.25em;
+  height: 2em;
+  font-size: 0.875em;
+}
+.button--fill {
+  background: #988574;
+  color: #fff;
+}
+
+.formInput__input {
+  -webkit-appearance: none;
+  appearance: none;
+  border: 1px solid #767676;
+  border-radius: 0.25em;
+  height: 2em;
+  padding: 0.25em 0.5em;
+}
+
 .appHeader {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  padding-top: 1em;
+  padding-bottom: 1em;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -464,6 +489,9 @@ legend {
   }
 }
 
+.searchForm {
+  margin-top: 1em;
+}
 .searchForm__group {
   display: flex;
   flex-direction: row;
@@ -483,6 +511,9 @@ legend {
 }
 .searchForm .formInput__input {
   width: 100%;
+}
+.searchForm .button--primary {
+  margin-left: 1em;
 }
 
 /*# sourceMappingURL=index.css.map */
