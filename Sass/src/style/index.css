@@ -406,10 +406,10 @@ legend {
 
 .button {
   border: 0;
-  padding: 0.25em 1em;
-  border-radius: 0.25em;
-  height: 2em;
-  font-size: 0.875em;
+  padding: 0.25rem 1rem;
+  border-radius: 0.25rem;
+  height: 2rem;
+  font-size: 0.875rem;
 }
 .button--none {
   border: 0;
@@ -421,8 +421,8 @@ legend {
   color: #fff;
 }
 .button--burger {
-  width: 2em;
-  height: 2em;
+  width: 2rem;
+  height: 2rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -434,7 +434,7 @@ legend {
   width: 100%;
   height: 20%;
   background: #fff;
-  border-radius: 1.25em;
+  border-radius: 1.25rem;
   transition: all 300ms;
 }
 .is--active .button--burgerBarTop {
@@ -461,16 +461,16 @@ legend {
   -webkit-appearance: none;
   appearance: none;
   border: 1px solid #767676;
-  border-radius: 0.25em;
-  height: 2em;
-  padding: 0.25em 0.5em;
+  border-radius: 0.25rem;
+  height: 2rem;
+  padding: 0.25rem 0.5rem;
 }
 
 .appHeader {
-  padding-left: 1.5em;
-  padding-right: 1.5em;
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -511,8 +511,8 @@ legend {
 
 .logo__link {
   display: block;
-  width: 12.75em;
-  height: 3.6875em;
+  width: 12.75rem;
+  height: 3.6875rem;
   background-image: url("./../assets/images/webcafe-logo.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -541,13 +541,13 @@ legend {
   .memberOnly {
     order: -1;
     color: #fff;
-    font-size: 0.875em;
+    font-size: 0.875rem;
     letter-spacing: -0.02em;
   }
 }
 
 .searchForm {
-  margin-top: 1em;
+  margin-top: 1rem;
 }
 .searchForm__group {
   display: flex;
@@ -563,14 +563,65 @@ legend {
 }
 @media (min-width: 768px) {
   .searchForm .formInput {
-    width: 25em;
+    width: 25rem;
   }
 }
 .searchForm .formInput__input {
   width: 100%;
 }
 .searchForm .button--primary {
-  margin-left: 1em;
+  margin-left: 1rem;
+}
+
+.menu {
+  background: pink;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1.875rem;
+  padding-bottom: 1.875rem;
+}
+.menu.is--active {
+  transform: none;
+}
+.menu__link {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 12px;
+}
+@media (max-width: 767px) {
+  .menu {
+    background: rgba(171, 211, 117, 0.85);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100vh;
+    ackdrop-filter: blur(4px);
+    transform: translateX(-120%);
+  }
+  .menu__item {
+    border-bottom: 1px solid #767676;
+  }
+}
+@media (min-width: 768px) {
+  .menu {
+    max-width: 64rem;
+    margin-left: auto;
+    margin-right: auto;
+    background: #988574;
+  }
+  .menu__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: nowrap;
+  }
+  .menu__link {
+    color: #fff;
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

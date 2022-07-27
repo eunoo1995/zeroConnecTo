@@ -1,1 +1,44 @@
-// navigation.scss
+@use "../utils" as *;
+
+.menu {
+  background: pink;
+  @include paddingX(24px);
+  @include paddingY(30px);
+
+  &.is--active {
+    transform: none;
+  }
+
+  &__link {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 12px;
+  }
+
+  @include mobile {
+    background: rgba($green, 0.85);
+    @include pos(fixed, $t: 0, $l: 0);
+    width: 70%;
+    height: 100vh;
+    ackdrop-filter: blur(4px);
+    transform: translateX(-120%);
+    // padding: 24px;
+
+    &__item {
+      border-bottom: 1px solid $silver;
+    }
+  }
+
+  @include desktop {
+    @include boxSizeMax;
+    background: $secondary-color;
+    &__list {
+      @include flexbox($j: space-between);
+    }
+    &__link {
+      color: $white;
+      text-shadow: 1px 1px 0 $black, -1px -1px 0 $black;
+    }
+  }
+}

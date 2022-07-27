@@ -10,6 +10,6 @@ $rootUnit: 16px !default;
   @return (removeUnit(math.div($value, $base))) * 1rem;
 }
 
-@function rem($value, $base: $rootUnit) {
+@function em($value, $base: $rootUnit) {
   @return (removeUnit(math.div($value, $base))) * 1em;
 }
