@@ -18,6 +18,20 @@
     @include boxSizeMax;
     background: yellow;
   }
+
+  .buttonWrapper {
+    @include mobile {
+      // 위치 지정
+      @include pos;
+      top: 3.75rem;
+      right: $spacing-lg;
+      padding: 0.25rem;
+      overflow: hidden;
+    }
+    @include desktop {
+      display: none;
+    }
+  }
 }
 
 // 로고

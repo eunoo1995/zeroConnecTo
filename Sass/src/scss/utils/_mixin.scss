@@ -52,6 +52,12 @@
   transform: translate(-50%, -50%);
 }
 
+// 트랜스폼 관련 믹스인
+@mixin transRotate($tx, $ty, $rotate: 0) {
+  top: 50%;
+  transform: translate($tx, $ty) rotate(#{$rotate} + "deg");
+}
+
 @mixin boxSizeMax($max: $container-width) {
   max-width: $max;
   @include autoMargin;
