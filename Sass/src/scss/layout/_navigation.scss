@@ -21,7 +21,7 @@
     @include pos(fixed, $t: 0, $l: 0);
     width: 70%;
     height: 100vh;
-    ackdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
     transform: translateX(-120%);
     // padding: 24px;
 

@@ -371,7 +371,7 @@ legend {
 }
 
 .accentBoard {
-  color: brown;
+  color: #988574;
 }
 
 .accentFavorite {
@@ -383,10 +383,10 @@ legend {
 }
 
 .sprite {
-  min-height: rem(60px);
+  min-height: 3.75rem;
   background-image: url("./../assets/images/sprite_main.png");
   background-repeat: no-repeat;
-  padding-left: rem(64px);
+  padding-left: 4rem;
 }
 .spriteBook {
   background-position: 0 0;
@@ -543,6 +543,7 @@ legend {
     color: #fff;
     font-size: 0.875rem;
     letter-spacing: -0.02em;
+    line-height: 1.5;
   }
 }
 
@@ -597,7 +598,7 @@ legend {
     left: 0;
     width: 70%;
     height: 100vh;
-    ackdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
     transform: translateX(-120%);
   }
   .menu__item {
@@ -621,6 +622,74 @@ legend {
   .menu__link {
     color: #fff;
     text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
+  }
+}
+
+[class*=__title] {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+  font-size: 1.125rem;
+  margin-bottom: 16px;
+}
+
+[class*=__summary] {
+  font-size: 0.875rem;
+  letter-spacing: -0.02em;
+  line-height: 1.5;
+  margin-top: 16px;
+}
+
+.home [class*=__title] {
+  margin-bottom: 1rem;
+}
+.home [class*=__summary] {
+  margin-top: 1rem;
+}
+@media (max-width: 767px) {
+  .home {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    gap: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .home {
+    max-width: 64rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    gap: 1.25rem;
+    grid-template-areas: "news news news news news news news news news news news news" "book book book book twitter twitter twitter twitter twitter favorite favorite favorite" "book book book book . board board board board board board board";
+  }
+  .home .book {
+    grid-area: book;
+  }
+  .home .news {
+    grid-area: news;
+  }
+  .home .board {
+    grid-area: board;
+  }
+  .home .favorite {
+    grid-area: favorite;
+  }
+  .home .twitter {
+    grid-area: twitter;
   }
 }
 
